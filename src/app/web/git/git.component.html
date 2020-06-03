@@ -1,0 +1,38 @@
+<div style="text-align: center">
+    <button (click)="historyBack()" style="float: left">返回</button>
+    Git常用命令
+</div>
+<br>
+git reset --sort [commit] 重置当前分支的指针到指定的commit，不改变暂存区和工作区的改动
+<br>
+git reset --hard [commit] 重置当前分支的指针到指定的commit，同时重置工作区和暂存区的文件，与指定的提交保持一致
+<br>
+<br>
+git stash 将未提交的更改变化移除（工作区和暂存区）
+<br>
+<br>
+git cherry-pick [commit1] [commit2]将指定的其他分支的提交提交到当前分支
+<br>
+-n 只更新工作区和暂存区，不产生新的提交
+<br>
+--continue 解决冲突后，git add至暂存区，然后git cherry-pick --continue
+<br>
+<br>
+git branch --track [branch] [remote-branch] 新建一个分支，并与指定的远程分支建立追踪关系
+<br>
+git branch -v 查看本地分支 -vv 产看本地分支及对应的远程分支的关系
+<br>
+git branch --set-upstream-to/-u [branch] [remote-branch] 将当前分支与指定的远程分支建立追踪关系
+<br>
+git branch -d [branch] 删除本地分支 -D 强制删除
+<br>
+<br>
+git revert [commit] 撤销指定的版本，撤销也会作为一次提交进行保存
+<br>
+<br>
+git checkout [branch] 切换到指定分支
+<br>
+-b 新建分支并切换到该分支
+<br>
+<br>
+git merge -n [other-branch]

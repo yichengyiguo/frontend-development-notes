@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: './web/javascript/javascript.module#JavascriptModule'
   },
   {
+    path: 'git',
+    loadChildren: './web/git/git.module#GitModule'
+  },
+  {
     path: '',
     redirectTo: '/main',
     pathMatch: 'full'
