@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./book-link.component.scss']
 })
 export class BookLinkComponent implements OnInit {
-  @Input() bookData: {};
+  @Input() bookData: any;
   constructor() { }
 
   ngOnInit() {
