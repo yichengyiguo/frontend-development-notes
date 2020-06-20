@@ -1,0 +1,29 @@
+<div class='book' *ngIf="bookData && bookData.name">
+    <ul class='hardcover_front'>
+        <li>
+            <div class="coverDesign" [style.backgroundColor]="bookData.color">
+                <span class="ribbon" *ngIf="bookData.specialNote">{{bookData.specialNote}}</span>
+                <h1>{{bookData.name}}</h1>
+                <p>{{bookData.subtitle}}</p>
+            </div>
+        </li>
+        <li></li>
+    </ul>
+    <ul class='page'>
+        <li></li>
+        <li>
+            <!-- <a class="btn" href="#">Download</a> -->
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class='hardcover_back'>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class='book_spine'>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
