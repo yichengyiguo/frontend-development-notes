@@ -1,0 +1,15 @@
+.main-container {
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 300px;
+    text-align: center;
+    .books {
+        display: inline-block;
+        // text-align: left;
+        .book-container {
+            display: inline-block;
+            margin: 30px;
+        }
+    }
+}
+

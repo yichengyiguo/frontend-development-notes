@@ -10,7 +10,8 @@ export class MainComponent implements OnInit {
   bookDataArr: object[] = [
     { name: 'Javascript', subtitle: 'Js、Es6', specialNote: 'No.1', color: '#3498db', route: 'javascript' },
     { name: 'Css', subtitle: 'css、css3', specialNote: 'No.2', color: '#f1c40f', route: 'css' },
-    { name: 'Git', subtitle: 'Git常用命令', specialNote: 'No.3', color: '#16a085', route: 'git' }
+    { name: 'Git', subtitle: 'Git常用命令', specialNote: 'No.3', color: '#16a085', route: 'git' },
+    { name: 'Typescript', subtitle: '类型声明、检查', specialNote: 'No.4', color: '#73ABFE', route: 'typescript' }
   ]
   constructor(
     private route: Router
