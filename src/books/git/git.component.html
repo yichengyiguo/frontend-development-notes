@@ -3,48 +3,52 @@
     Git常用命令
 </div>
 <pre>
-git reset --sort [commit] 重置当前分支的指针到指定的commit，不改变暂存区和工作区的改动
-git reset --hard [commit] 重置当前分支的指针到指定的commit，同时重置工作区和暂存区的文件，与指定的提交保持一致
-
-git stash 将未提交的更改变化暂存起来，暂时移出工作区和暂存区
-
-git cherry-pick [commit1] [commit2]将指定的其他分支的提交提交到当前分支
--n 只更新工作区和暂存区，不产生新的提交
---continue 解决冲突后，git add至暂存区，然后git cherry-pick --continue
-
-git branch --track [branch] [remote-branch] 新建一个分支，并与指定的远程分支建立追踪关系
-git branch -v 查看本地分支 -vv 产看本地分支及对应的远程分支的关系
-git branch --set-upstream-to/-u [branch] [remote-branch] 将当前分支与指定的远程分支建立追踪关系
-git branch --set-upstream-to=origin/[remote-branch] [branch]
-git branch -d [branch] 删除本地分支 -D 强制删除
-
-git revert [commit] 撤销指定的版本，撤销也会作为一次提交进行保存
-
-git checkout [branch] 切换到指定分支
--b 新建分支并切换到该分支
-git checkout -b [branch] [remote-brabch] 新建分支,切换到该分支并且跟踪远程分支
-
-git merge -n [other-branch] 合并其分支到当前分支， -n 不提交代码
-git merge --abort 取消合并
-
-ssh-keygen -t rsa -C "your_email@example.com"  生成git公钥和私钥
-
-git pull origin [remote-branch] 拉取远程分支到当前分支
-
-
-git rebase --continue
-git rebase --skip
-git rebase --abort
-
-撤销某次commit的某个文件的更改
-git reset [last-commit] [filename] -> git checkout [filename] -> git commit --amend -no-edit 
-
-新建一个分支后用远程分支覆盖此分支（当前分支为新建的分支）
-git fetch --all  ->  git reset --hard origin/[remote-baranch-name]
-
-修改远程仓库地址
-git remote set-url origin  [url]
-git remote set-url --add/--delete origin  [url]
-在本地更新远程仓库新建的分支（远程仓库新建了分支但是本地拉不下来）
-git remote update origin --prune
+    git reset --sort [commit] 重置当前分支的指针到指定的commit，不改变暂存区和工作区的改动
+    git reset --hard [commit] 重置当前分支的指针到指定的commit，同时重置工作区和暂存区的文件，与指定的提交保持一致
+    git reset .取消暂存
+    
+    git stash 将未提交的更改变化暂存起来，暂时移出工作区和暂存区
+    
+    git cherry-pick [commit1] [commit2]将指定的其他分支的提交提交到当前分支
+    -n 只更新工作区和暂存区，不产生新的提交
+    --continue 解决冲突后，git add至暂存区，然后git cherry-pick --continue
+    
+    git branch --track [branch] [remote-branch] 新建一个分支，并与指定的远程分支建立追踪关系
+    git branch -v 查看本地分支 -vv 产看本地分支及对应的远程分支的关系
+    git branch --set-upstream-to/-u [branch] [remote-branch] 将当前分支与指定的远程分支建立追踪关系
+    git branch --set-upstream-to=origin/[remote-branch] [branch]
+    git branch -d [branch] 删除本地分支 -D 强制删除
+    
+    git revert [commit] 撤销指定的版本，撤销也会作为一次提交进行保存
+    
+    git checkout [branch] 切换到指定分支
+    -b 新建分支并切换到该分支
+    git checkout -b [branch] [remote-brabch] 新建分支,切换到该分支并且跟踪远程分支
+    git checkout -- filename 删除不在暂存区的修改文件
+    
+    git merge -n [other-branch] 合并其分支到当前分支， -n 不提交代码
+    git merge --abort 取消合并
+    
+    ssh-keygen -t rsa -C "your_email@example.com"  生成git公钥和私钥
+    
+    git pull origin [remote-branch] 拉取远程分支到当前分支
+    git push origin HEAD:[remote-branch] push的本地分支与远程分支不同名
+    
+    git rebase --continue
+    git rebase --skip
+    git rebase --abort
+    
+    撤销某次commit的某个文件的更改
+    git reset [last-commit] [filename] -> git checkout [filename] -> git commit --amend -no-edit 
+    git commit --amend 修改上一次提交
+    
+    新建一个分支后用远程分支覆盖此分支（当前分支为新建的分支）
+    git fetch --all  ->  git reset --hard origin/[remote-baranch-name]
+    
+    修改远程仓库地址
+    git remote set-url origin  [url]
+    git remote set-url --add/--delete origin  [url]
+    在本地更新远程仓库新建的分支（远程仓库新建了分支但是本地拉不下来）
+    
+    git remote update origin --prune
 </pre>
