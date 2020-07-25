@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: '../books/git/git.module#GitModule'
   },
   {
+    path: 'html',
+    loadChildren: '../books/html/html.module#HtmlModule'
+  },
+  {
     path: 'test',
     loadChildren: '../books/test/test.module#TestModule'
   },
