@@ -20,6 +20,14 @@ const routes: Routes = [
     loadChildren: '../books/html/html.module#HtmlModule'
   },
   {
+    path: 'css',
+    loadChildren: '../books/css/css.module#CssModule'
+  },
+  {
+    path: 'typescript',
+    loadChildren: '../books/typescript/typescript.module#TypescriptModule'
+  },
+  {
     path: 'test',
     loadChildren: '../books/test/test.module#TestModule'
   },
