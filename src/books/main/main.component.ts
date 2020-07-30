@@ -7,12 +7,16 @@ import { Router } from '@angular/router'
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+
+  private bookIndex: number = 0;
+
   bookDataArr: object[] = [
-    { name: 'Javascript', subtitle: 'Js、Es6', specialNote: 'No.1', color: '#3498db', route: 'javascript' },
-    { name: 'Css', subtitle: 'css、css3', specialNote: 'No.2', color: '#f1c40f', route: 'css' },
-    { name: 'Git', subtitle: 'Git常用命令', specialNote: 'No.3', color: '#16a085', route: 'git' },
-    { name: 'Typescript', subtitle: '类型声明、检查', specialNote: 'No.4', color: '#73ABFE', route: 'typescript' },
-    { name: 'Html', subtitle: 'Html, Html5', specialNote: 'No.5', color: '#A084F1', route: 'html' }
+    { name: 'Javascript', subtitle: 'Js、Es6', specialNote: this.getBookNum(), color: '#3498db', route: 'javascript' },
+    { name: 'Css', subtitle: 'css、css3', specialNote: this.getBookNum(), color: '#f1c40f', route: 'css' },
+    { name: 'Git', subtitle: 'Git常用命令', specialNote: this.getBookNum(), color: '#16a085', route: 'git' },
+    { name: 'Typescript', subtitle: '类型声明、检查', specialNote: this.getBookNum(), color: '#73ABFE', route: 'typescript' },
+    { name: 'Html', subtitle: 'Html、Html5', specialNote: this.getBookNum(), color: '#A084F1', route: 'html' },
+    { name: 'Angular', subtitle: '基础、进阶', specialNote: this.getBookNum(), color: '#144BA0', route: 'angular' }
   ]
   constructor(
     private route: Router
@@ -20,7 +24,13 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   }
+
   routerLinkTo(route) {
     this.route.navigateByUrl(route)
   }
+
+  getBookNum(): string {
+    return 'No.' + this.bookIndex++;
+  }
+
 }

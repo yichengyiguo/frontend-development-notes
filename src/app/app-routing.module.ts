@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: '../books/typescript/typescript.module#TypescriptModule'
   },
   {
+    path: 'angular',
+    loadChildren: '../books/angular/angular.module#AngularModule'
+  },
+  {
     path: 'test',
     loadChildren: '../books/test/test.module#TestModule'
   },
