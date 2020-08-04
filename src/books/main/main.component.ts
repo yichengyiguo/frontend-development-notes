@@ -17,7 +17,7 @@ export class MainComponent implements OnInit {
     { name: 'Angular', subtitle: '基础、进阶', specialNote: this.getBookNum(), color: '#144BA0', route: 'angular' },
     { name: 'Typescript', subtitle: '类型声明、检查', specialNote: this.getBookNum(), color: '#73ABFE', route: 'typescript' },
     { name: 'Git', subtitle: 'Git常用命令', specialNote: this.getBookNum(), color: '#16a085', route: 'git' },
-    { name: 'Typescript', subtitle: '类型声明、检查', specialNote: this.getBookNum(), color: '#73ABFE', route: 'typescript' }
+    { name: 'Node.js', subtitle: '', specialNote: this.getBookNum(), color: '#1DBB74', route: 'nodejs' }
   ]
   constructor(
     private route: Router
