@@ -32,6 +32,10 @@ const routes: Routes = [
     loadChildren: '../books/angular/angular.module#AngularModule'
   },
   {
+    path: 'nodejs',
+    loadChildren: '../books/nodejs/nodejs.module#NodejsModule'
+  },
+  {
     path: 'test',
     loadChildren: '../books/test/test.module#TestModule'
   },
