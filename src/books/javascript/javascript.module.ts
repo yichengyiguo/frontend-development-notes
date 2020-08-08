@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common'
 import { Routes, RouterModule } from "@angular/router";
 import { JavascriptComponent } from './javascript.component';
 import { TemporaryModule } from './temporary/temporary.module';
@@ -18,6 +19,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [JavascriptComponent],
   imports: [
+    CommonModule,
     RouterModule.forChild(routes),
     TemporaryModule
   ]

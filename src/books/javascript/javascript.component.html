@@ -1,8 +1,11 @@
-<div>
-    <ul>
-        <li><a routerLink="/javascript/temporary" routerLinkActive="active">Temporary notes</a></li>
-    </ul>
-</div>
-<div>
-    <router-outlet></router-outlet>
+<div class="js-container">
+    <div>
+        <ul>
+            <li><a routerLink="/javascript/temporary" routerLinkActive="active">Temporary notes</a></li>
+            <li *ngFor="let note of notesList"><a>{{note}}</a></li>
+        </ul>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
 </div>
