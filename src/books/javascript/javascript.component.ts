@@ -18,6 +18,7 @@ export class JavascriptComponent implements OnInit {
     "内置对象",
     "浏览器对象模型BOM",
     "文档对象模型DOM",
+    "正则"
   ]
 
   constructor() { }
