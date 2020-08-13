@@ -1,8 +1,9 @@
 <div class="js-container">
     <div>
         <ul>
-            <li><a routerLink="/javascript/temporary" routerLinkActive="active">Temporary notes</a></li>
-            <li *ngFor="let note of notesList"><a>{{note}}</a></li>
+            <li *ngFor="let note of notesList">
+                <a (click)="navigateTo(note.routeTo)" outerLinkActive="active">{{note.description}}</a>
+            </li>
         </ul>
     </div>
     <div>
