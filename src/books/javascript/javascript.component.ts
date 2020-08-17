@@ -17,7 +17,7 @@ export class JavascriptComponent implements OnInit {
     {description: "数据类型", routeTo: 'dataType'},
     {description: "语句", routeTo: ''},
     {description: "变量", routeTo: ''},
-    {description: "函数", routeTo: ''},
+    {description: "函数", routeTo: 'function'},
     {description: "对象", routeTo: ''},
     {description: "异步", routeTo: ''},
     {description: "内置对象", routeTo: ''},
