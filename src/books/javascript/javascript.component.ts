@@ -18,7 +18,7 @@ export class JavascriptComponent implements OnInit {
     {description: "语句", routeTo: ''},
     {description: "变量", routeTo: ''},
     {description: "函数", routeTo: 'function'},
-    {description: "对象", routeTo: ''},
+    {description: "对象", routeTo: 'object'},
     {description: "异步", routeTo: ''},
     {description: "内置对象", routeTo: ''},
     {description: "浏览器对象模型BOM", routeTo: ''},
