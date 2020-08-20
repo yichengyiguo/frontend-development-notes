@@ -16,7 +16,7 @@ export class JavascriptComponent implements OnInit {
   notesList: Array<ListModel> = [
     {description: "数据类型", routeTo: 'dataType'},
     {description: "语句", routeTo: ''},
-    {description: "变量", routeTo: ''},
+    {description: "变量", routeTo: 'variable'},
     {description: "函数", routeTo: 'function'},
     {description: "对象", routeTo: 'object'},
     {description: "异步", routeTo: ''},

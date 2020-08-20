@@ -5,12 +5,14 @@ import { TemporaryComponent } from './temporary/temporary.component';
 import { DataTypeComponent } from './data-type/data-type.component';
 import { FunctionComponent } from './function/function.component';
 import { ObjectComponent } from './object/object.component';
+import { VariableComponent } from './variable/variable.component';
 
 const routes: Routes = [
   {
     path: '' , 
     component: JavascriptComponent,
     children: [
+      {path: 'variable', component: VariableComponent},
       {path: 'object', component: ObjectComponent},
       {path: 'function', component: FunctionComponent},
       {path: 'dataType', component: DataTypeComponent},
@@ -25,7 +27,8 @@ const routes: Routes = [
     TemporaryComponent,
     DataTypeComponent,
     FunctionComponent,
-    ObjectComponent
+    ObjectComponent,
+    VariableComponent
   ],
   imports: [
     RouterModule.forChild(routes),
