@@ -1,5 +1,5 @@
 # Frontend Development Notes
 
 ## Demo
-https://yichengyiguo.github.io/frontend-development-notes/
+https://yichengyiguo.github.io
 
